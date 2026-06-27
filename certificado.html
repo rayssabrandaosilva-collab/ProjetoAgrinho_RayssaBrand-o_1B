@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://projetoagrinho-rayssaisabelly1b.netlify.app/certificado.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<title>Certificado Futuro Sustentável</title>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+<link href="./Certificado Futuro Sustentável_files/css2" rel="stylesheet">
+
+
+<style>
+
+
+*{
+
+box-sizing:border-box;
+
+}
+
+
+body{
+
+
+margin:0;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#fff8df,#fff3c4);
+
+font-family:Montserrat,Arial;
+
+}
+
+
+
+
+
+.certificado{
+
+
+width:1100px;
+
+height:750px;
+
+background:#fff;
+
+border:12px solid #c9a227;
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+}
+
+
+
+.certificado::before{
+
+
+content:"";
+
+position:absolute;
+
+inset:25px;
+
+border:2px solid #ddc46b;
+
+
+}
+
+
+
+
+
+.conteudo{
+
+
+position:relative;
+
+z-index:2;
+
+width:80%;
+
+text-align:center;
+
+
+}
+
+
+
+
+
+.titulo{
+
+
+font-family:Cinzel,serif;
+
+font-size:65px;
+
+letter-spacing:8px;
+
+color:#b58a18;
+
+
+}
+
+
+
+
+
+.linha{
+
+
+width:350px;
+
+height:2px;
+
+background:#c9a227;
+
+margin:20px auto;
+
+
+}
+
+
+
+
+
+.texto{
+
+
+font-size:22px;
+
+color:#444;
+
+line-height:1.7;
+
+
+}
+
+
+
+
+.nome{
+
+
+font-family:Cinzel,serif;
+
+font-size:55px;
+
+color:#163b2b;
+
+margin:30px 0;
+
+
+}
+
+
+
+
+
+.pontos{
+
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#087f3d;
+
+margin-top:25px;
+
+
+}
+
+
+
+
+.aprovado{
+
+
+font-size:40px;
+
+letter-spacing:6px;
+
+font-weight:bold;
+
+color:#087f3d;
+
+margin-top:25px;
+
+
+}
+
+
+
+
+
+.data{
+
+
+font-size:18px;
+
+color:#777;
+
+margin-top:20px;
+
+
+}
+
+
+
+
+.desenho{
+
+
+position:absolute;
+
+width:100px;
+
+height:100px;
+
+z-index:2;
+
+
+}
+
+
+
+
+
+.gota{
+
+
+top:55px;
+
+right:70px;
+
+
+}
+
+
+
+
+
+.arvore{
+
+
+bottom:55px;
+
+left:70px;
+
+
+}
+
+
+
+
+
+button{
+
+
+margin-top:30px;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:35px;
+
+background:#c9a227;
+
+color:white;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+
+
+
+<div id="pagina">
+
+<div class="certificado" id="certificado">
+
+<div class="conteudo">
+
+<h1 class="titulo">
+CERTIFICADO
+</h1>
+
+<div class="linha"></div>
+
+<div class="texto">
+Certificamos que
+</div>
+
+<div class="nome" id="nome"></div>
+
+<div class="texto">
+
+concluiu com sucesso o
+<br>
+<strong>Quiz Futuro Sustentável</strong>
+<br>
+demonstrando conhecimento,
+consciência ambiental e compromisso
+com um futuro melhor.
+
+</div>
+
+<div class="pontos" id="pontos"></div>
+
+<div class="aprovado">
+APROVADO
+</div>
+
+<div class="data" id="data"></div>
+
+</div>
+
+</div>
+
+<button onclick="baixarPDF()">
+
+Baixar Certificado PDF
+
+</button>
+
+
+<script>
+
+
+
+let nome = localStorage.getItem("nomeUsuario");
+let pontos = Number(localStorage.getItem("pontuacao"));
+
+document.getElementById("nome").innerHTML = nome;
+
+document.getElementById("pontos").innerHTML =
+pontos + " de 25 acertos";
+
+document.getElementById("data").innerHTML =
+new Date().toLocaleDateString("pt-BR");
+
+
+
+if(pontos < 15){
+
+if(pontos < 15){
+
+
+document.body.innerHTML = `
+
+<div class="reprovado">
+
+
+<div class="caixa-erro">
+
+
+<div class="icone">
+
+
+</div>
+
+
+<h1>
+
+Quase conseguiu!
+
+</h1>
+
+
+
+<h2>
+
+Você acertou ${pontos} de 25 perguntas
+
+</h2>
+
+
+
+<p>
+
+Você precisa de <b>15 acertos</b> ou mais para conquistar seu certificado.
+
+</p>
+
+
+
+<div class="mensagem">
+
+Não desista! Continue aprendendo e tente novamente para conquistar seu certificado 🏆
+
+</div>
+
+
+
+<button onclick="window.location.href='index.html'">
+
+🔄 Fazer novamente
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+`;
+
+}
+
+}
+
+
+
+async function baixarPDF(){
+
+
+
+const elemento = document.getElementById("certificado");
+
+
+
+const canvas = await html2canvas(elemento,{
+
+scale:3
+
+});
+
+
+
+const imagem = canvas.toDataURL("image/png");
+
+
+
+const {jsPDF}=window.jspdf;
+
+
+
+const pdf = new jsPDF({
+
+
+orientation:"landscape",
+
+unit:"px",
+
+format:[1100,750]
+
+
+});
+
+
+
+
+pdf.addImage(
+
+imagem,
+
+"PNG",
+
+0,
+
+0,
+
+1100,
+
+750
+
+);
+
+
+
+
+pdf.save("Certificado_Futuro_Sustentavel.pdf");
+
+
+
+}
+
+</script>
+
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>
