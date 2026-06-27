@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoVida - O Futuro Sustentável</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+
+<div class="acessibilidade">
+
+
+<button onclick="lerPagina()">🔊</button>
+
+<button onclick="aumentarFonte()">A+</button>
+
+<button onclick="diminuirFonte()">A-</button>
+
+<button onclick="contraste()">🌙</button>
+
+
+</div>
+
+
+
+
+
+
+
+<section class="home-premium" id="home">
+
+
+
+<div class="tag">
+
+🌱 EDUCAÇÃO • TECNOLOGIA • SUSTENTABILIDADE
+
+</div>
+
+
+
+
+<h1>
+
+EcoVida<br>
+
+O FUTURO SUSTENTÁVEL
+
+</h1>
+
+
+
+
+<p>
+
+O futuro do planeta começa com as escolhas que fazemos hoje.
+
+</p>
+
+
+
+
+
+
+
+<div class="nome-box">
+
+
+<h2>
+
+🌎 Digite seu nome para participar do quiz
+
+</h2>
+
+
+
+<input 
+id="nomeUsuario"
+type="text"
+placeholder="Digite seu nome completo">
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="botoes">
+
+
+<button class="btn btn1" id="btnProjeto">
+    🌱 Conhecer Projeto
+</button>
+
+
+<button class="btn btn2" onclick="iniciarQuiz()">
+
+🎯 Começar Quiz
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<div style="height:100vh;"></div>
+
+
+
+
+
+
+
+<section id="sobre" class="conteudo">
+
+
+
+<h1>
+
+🌎 Sobre o Futuro Sustentável
+
+</h1>
+
+
+
+
+
+<p class="descricao">
+
+Conheça os pilares que ajudam a construir um planeta melhor.
+
+</p>
+
+
+
+
+
+<div class="cards-sobre">
+
+
+
+
+
+
+<div class="card-flip">
+
+
+<div class="frente">
+
+
+<img src="img/sustentabilidade.jpg">
+
+
+<h2>
+
+🌱 Sustentabilidade
+
+</h2>
+
+
+</div>
+
+
+
+<div class="tras">
+
+<p>
+
+Cuidar do planeta através de escolhas conscientes e atitudes sustentáveis.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card-flip">
+
+
+<div class="frente">
+
+
+<img src="img/energia.jpg">
+
+
+<h2>
+
+⚡ Energia Limpa
+
+</h2>
+
+
+</div>
+
+
+
+<div class="tras">
+
+<p>
+
+Usar fontes renováveis para criar um futuro com menos impactos ambientais.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card-flip">
+
+
+<div class="frente">
+
+
+<img src="img/floresta.jpg">
+
+
+<h2>
+
+🌳 Preservação
+
+</h2>
+
+
+</div>
+
+
+
+<div class="tras">
+
+<p>
+
+Proteger florestas e biodiversidade para as próximas gerações.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="card-flip">
+
+
+<div class="frente">
+
+
+<img src="img/reciclagem.jpg">
+
+
+<h2>
+
+♻️ Reciclagem
+
+</h2>
+
+
+</div>
+
+
+
+<div class="tras">
+
+
+<p>
+
+Transformar resíduos em novos recursos e reduzir desperdícios.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- CARD 5 -->
+
+
+<div class="card-flip">
+
+
+<div class="frente">
+
+
+<img src="img/futuro.jpg">
+
+
+<h2>
+
+🌎 Futuro Verde
+
+</h2>
+
+
+</div>
+
+
+
+<div class="tras">
+
+
+<p>
+
+Tecnologia e consciência trabalhando juntas pelo planeta.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- CARD 6 -->
+
+
+<div class="card-flip">
+
+
+<div class="frente">
+
+
+<img src="img/agua.jpg">
+
+
+<h2>
+
+💧 Recursos Naturais
+
+</h2>
+
+
+</div>
+
+
+
+<div class="tras">
+
+
+<p>
+
+Preservar água, solo e natureza é proteger a vida.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<a href="#home">
+
+
+<button class="btn btn1">
+
+⬆ Voltar Home
+
+</button>
+
+
+</a>
+
+
+
+
+</section>
+
+<script src="script.js"></script>
+
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+
+</body>
+
+</html>
