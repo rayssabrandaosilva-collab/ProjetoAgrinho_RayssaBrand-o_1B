@@ -1,0 +1,2712 @@
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:'Segoe UI', Arial, sans-serif;
+
+}
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+
+
+body{
+
+
+min-height:100vh;
+
+
+background:
+
+linear-gradient(
+rgba(0,30,15,.55),
+rgba(0,0,0,.75)
+),
+
+url("https://images.unsplash.com/photo-1500382017468-9049fed747ef");
+
+
+background-size:cover;
+
+
+background-position:center;
+
+
+background-attachment:fixed;
+
+
+}
+
+
+
+
+/* =====================
+   HOME
+===================== */
+
+
+.home-premium{
+
+
+min-height:100vh;
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+max-width:1200px;
+
+
+margin:auto;
+
+
+padding:60px;
+
+
+background:rgba(255,255,255,.12);
+
+
+backdrop-filter:blur(12px);
+
+
+border-radius:35px;
+
+
+box-shadow:
+
+0 30px 80px rgba(0,0,0,.6);
+
+
+color:white;
+
+
+text-align:center;
+
+
+}
+
+
+
+
+
+.tag{
+
+
+font-size:15px;
+
+
+letter-spacing:3px;
+
+
+margin-bottom:30px;
+
+
+background:rgba(255,255,255,.15);
+
+
+padding:15px 25px;
+
+
+border-radius:50px;
+
+
+}
+
+
+
+
+
+.home-premium h1{
+
+
+font-size:85px;
+
+
+font-weight:900;
+
+
+letter-spacing:8px;
+
+
+line-height:.95;
+
+
+color:white;
+
+
+text-shadow:
+
+0 10px 25px rgba(0,0,0,.8);
+
+
+}
+
+
+
+
+
+.home-premium p{
+
+
+font-size:22px;
+
+
+line-height:1.7;
+
+
+margin:30px;
+
+
+}
+
+
+
+
+
+/* =====================
+   NOME
+===================== */
+
+
+.nome-box{
+
+
+margin:40px auto;
+
+
+padding:35px;
+
+
+max-width:600px;
+
+
+background:
+
+rgba(255,255,255,.15);
+
+
+border-radius:25px;
+
+
+}
+
+
+
+
+
+.nome-box h2{
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.nome-box input{
+
+
+width:100%;
+
+
+padding:18px;
+
+
+border-radius:15px;
+
+
+border:none;
+
+
+font-size:18px;
+
+
+text-align:center;
+
+
+outline:none;
+
+
+}
+
+
+
+
+.nome-box input:focus{
+
+
+box-shadow:
+
+0 0 20px #9be15d;
+
+
+}
+
+
+
+
+
+
+/* =====================
+   BOTÕES
+===================== */
+
+
+.botoes{
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+gap:20px;
+
+
+margin-top:35px;
+
+
+flex-wrap:wrap;
+
+
+}
+
+
+
+
+.btn{
+
+
+padding:18px 40px;
+
+
+border:none;
+
+
+border-radius:25px;
+
+
+font-size:18px;
+
+
+font-weight:bold;
+
+
+cursor:pointer;
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+
+.btn:hover{
+
+
+transform:translateY(-6px);
+
+
+}
+
+
+
+
+.btn1{
+
+
+background:white;
+
+
+color:#087f3d;
+
+
+}
+
+
+
+
+
+.btn2{
+
+
+background:#087f3d;
+
+
+color:white;
+
+
+box-shadow:
+
+0 10px 30px rgba(0,255,100,.3);
+
+
+}
+
+/* =====================
+   SOBRE
+===================== */
+
+
+.conteudo{
+
+
+padding:100px 40px;
+
+
+background:#06241a;
+
+
+text-align:center;
+
+
+}
+
+
+
+
+.conteudo h1{
+
+
+font-size:45px;
+
+
+color:white;
+
+
+}
+
+
+
+
+
+.descricao{
+
+
+font-size:20px;
+
+
+color:#ddd;
+
+
+margin:20px auto;
+
+
+}
+
+
+
+
+
+
+/* =========================
+   CARDS 3X3 PREMIUM
+========================= */
+
+
+.cards-sobre{
+
+
+display:grid;
+
+
+grid-template-columns:repeat(3,320px);
+
+
+justify-content:center;
+
+
+gap:40px;
+
+
+margin:60px auto;
+
+
+}
+
+
+
+
+
+.card-flip{
+
+
+width:320px;
+
+
+height:380px;
+
+
+position:relative;
+
+
+perspective:1200px;
+
+
+}
+
+
+
+
+
+
+
+.card-flip .frente,
+.card-flip .tras{
+
+
+position:absolute;
+
+
+inset:0;
+
+
+border-radius:30px;
+
+
+overflow:hidden;
+
+
+backface-visibility:hidden;
+
+
+transition:.8s;
+
+
+}
+
+
+
+
+
+
+
+/* FRENTE FOTO */
+
+
+.card-flip .frente{
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+text-align:center;
+
+
+background-size:cover;
+
+
+background-position:center;
+
+
+}
+
+
+
+
+
+.card-flip .frente::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+inset:0;
+
+
+background:rgba(0,0,0,.45);
+
+
+}
+
+
+
+
+
+.card-flip .frente h2{
+
+
+position:relative;
+
+
+z-index:2;
+
+
+color:white;
+
+
+font-size:32px;
+
+
+font-weight:900;
+
+
+text-shadow:0 5px 20px black;
+
+
+padding:20px;
+
+
+}
+
+
+
+
+
+
+
+/* FOTOS */
+
+
+.card-flip:nth-child(1) .frente{
+
+background-image:url("img/sustentabilidade.jpg");
+
+}
+
+
+
+.card-flip:nth-child(2) .frente{
+
+background-image:url("img/energia.jpg");
+
+}
+
+
+
+.card-flip:nth-child(3) .frente{
+
+background-image:url("img/floresta.jpg");
+
+}
+
+
+
+.card-flip:nth-child(4) .frente{
+
+background-image:url("img/reciclagem.jpg");
+
+}
+
+
+
+.card-flip:nth-child(5) .frente{
+
+background-image:url("img/futuro.jpg");
+
+}
+
+
+
+.card-flip:nth-child(6) .frente{
+
+background-image:url("img/agua.jpg");
+
+}
+
+
+
+
+
+
+
+/* VERSO */
+
+
+.card-flip .tras{
+
+
+background:#087f3d;
+
+
+color:white;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+text-align:center;
+
+
+padding:40px;
+
+
+transform:rotateY(180deg);
+
+
+}
+
+
+
+
+
+.card-flip .tras p{
+
+
+font-size:23px;
+
+
+line-height:1.5;
+
+
+}
+
+
+
+
+
+
+
+
+/* VIRAR */
+
+
+.card-flip:hover .frente{
+
+
+transform:rotateY(180deg);
+
+
+}
+
+
+
+.card-flip:hover .tras{
+
+
+transform:rotateY(360deg);
+
+
+}
+
+
+
+
+
+
+
+/* RESPONSIVO */
+
+
+@media(max-width:1100px){
+
+
+.cards-sobre{
+
+
+grid-template-columns:repeat(2,320px);
+
+
+}
+
+
+}
+
+
+
+
+@media(max-width:700px){
+
+
+.cards-sobre{
+
+
+grid-template-columns:320px;
+
+
+}
+
+
+}
+
+
+/* =====================
+   QUIZ
+===================== */
+
+
+.quiz-box{
+
+
+min-height:650px;
+
+
+max-width:1000px;
+
+
+margin:auto;
+
+
+padding:60px;
+
+
+background:rgba(255,255,255,.12);
+
+
+backdrop-filter:blur(15px);
+
+
+border-radius:35px;
+
+
+text-align:center;
+
+
+color:white;
+
+
+}
+
+
+
+
+#contador{
+
+
+font-size:20px;
+
+
+}
+
+
+
+
+
+#pergunta{
+
+
+font-size:42px;
+
+
+margin:40px;
+
+
+}
+
+
+
+
+
+#respostas{
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+gap:20px;
+
+
+}
+
+
+
+
+.resposta{
+
+
+padding:22px;
+
+
+border:none;
+
+
+border-radius:20px;
+
+
+font-size:20px;
+
+
+cursor:pointer;
+
+
+font-weight:bold;
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+
+.resposta:hover{
+
+
+transform:scale(1.05);
+
+
+background:#087f3d;
+
+
+color:white;
+
+
+}
+
+
+
+
+
+/* CELULAR */
+
+
+@media(max-width:700px){
+
+
+
+.home-premium h1{
+
+
+font-size:45px;
+
+
+}
+
+
+.home-premium p{
+
+
+font-size:18px;
+
+
+}
+
+
+
+#pergunta{
+
+
+font-size:30px;
+
+
+}
+
+
+.btn{
+
+
+width:100%;
+
+
+}
+
+
+}
+
+/* =========================
+   AJUSTE FINAL DO QUIZ
+========================= */
+
+
+body:has(.quiz-box){
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+padding:30px;
+
+}
+
+
+
+
+
+.overlay{
+
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+
+}
+
+
+
+
+.quiz-box{
+
+
+width:100%;
+
+max-width:900px;
+
+min-height:600px;
+
+padding:50px;
+
+
+background:rgba(255,255,255,.15);
+
+
+backdrop-filter:blur(20px);
+
+
+border-radius:35px;
+
+
+box-shadow:
+
+0 25px 70px rgba(0,0,0,.5);
+
+
+text-align:center;
+
+
+color:white;
+
+
+}
+
+
+
+
+.quiz-box h1{
+
+
+font-size:45px;
+
+margin-bottom:20px;
+
+}
+
+
+
+
+
+#contador{
+
+
+font-size:22px;
+
+opacity:.9;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+
+
+#pergunta{
+
+
+font-size:35px;
+
+
+line-height:1.3;
+
+
+margin:35px auto;
+
+
+max-width:750px;
+
+
+}
+
+
+
+
+
+#respostas{
+
+
+width:100%;
+
+
+max-width:700px;
+
+
+margin:auto;
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+gap:18px;
+
+
+}
+
+
+
+
+
+.resposta{
+
+
+width:100%;
+
+
+padding:20px;
+
+
+border-radius:18px;
+
+
+border:none;
+
+
+font-size:20px;
+
+
+font-weight:600;
+
+
+cursor:pointer;
+
+
+background:white;
+
+
+color:#087f3d;
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+.resposta:hover{
+
+
+transform:scale(1.03);
+
+
+background:#087f3d;
+
+
+color:white;
+
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+.quiz-box{
+
+
+padding:30px 20px;
+
+
+}
+
+
+
+.quiz-box h1{
+
+
+font-size:32px;
+
+
+}
+
+
+
+#pergunta{
+
+
+font-size:25px;
+
+
+}
+
+
+.resposta{
+
+
+font-size:17px;
+
+
+}
+
+
+
+}
+
+/* =========================
+ ACESSIBILIDADE
+========================= */
+
+
+.acessibilidade{
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+z-index:9999;
+
+display:flex;
+
+gap:10px;
+
+}
+
+
+
+.acessibilidade button{
+
+width:45px;
+
+height:45px;
+
+border:none;
+
+border-radius:50%;
+
+background:white;
+
+color:#087f3d;
+
+font-weight:bold;
+
+font-size:18px;
+
+cursor:pointer;
+
+box-shadow:
+
+0 5px 20px rgba(0,0,0,.3);
+
+transition:.3s;
+
+}
+
+
+
+.acessibilidade button:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+
+
+body.alto-contraste{
+
+background:#000!important;
+
+color:#fff!important;
+
+}
+
+
+
+body.alto-contraste .home-premium,
+body.alto-contraste .conteudo,
+body.alto-contraste .quiz-box{
+
+background:#000!important;
+
+border:2px solid white;
+
+}
+
+
+
+body.alto-contraste p,
+body.alto-contraste h1,
+body.alto-contraste h2{
+
+color:white!important;
+
+}
+
+
+
+button:focus,
+input:focus{
+
+outline:4px solid #ffff00;
+
+}
+
+/* =========================
+   ANIMAÇÃO GERAL PREMIUM
+========================= */
+
+
+*{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+animation: aparecerSite 1s ease;
+
+}
+
+
+
+@keyframes aparecerSite{
+
+
+from{
+
+opacity:0;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+
+/* FUNDO COM MOVIMENTO */
+
+
+body{
+
+
+background-size:110%;
+
+
+animation:fundoMovimento 15s infinite alternate ease-in-out;
+
+
+}
+
+
+
+@keyframes fundoMovimento{
+
+
+from{
+
+background-position:center;
+
+}
+
+
+to{
+
+background-position:top center;
+
+}
+
+
+}
+
+
+
+
+
+/* HOME ENTRADA */
+
+
+.home-premium{
+
+
+animation:homeEntrada 1.3s ease;
+
+
+}
+
+
+
+
+@keyframes homeEntrada{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+}
+
+
+
+
+
+.tag{
+
+
+animation:subir .9s ease;
+
+}
+
+
+
+h1{
+
+
+animation:tituloEntrada 1.5s ease;
+
+
+}
+
+
+
+@keyframes tituloEntrada{
+
+
+from{
+
+opacity:0;
+
+transform:scale(.7);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+
+
+}
+
+
+
+
+
+.nome-box{
+
+
+animation:subir 1.5s ease;
+
+
+}
+
+
+
+@keyframes subir{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+}
+
+
+
+
+
+/* BOTÕES */
+
+
+.btn{
+
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+.btn:hover{
+
+
+transform:translateY(-10px) scale(1.05);
+
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.35);
+
+
+}
+
+
+
+
+
+/* CARTAS */
+
+
+.card-flip{
+
+
+animation:cartasEntrada .8s ease backwards;
+
+
+}
+
+
+
+.card-flip:nth-child(1){
+
+animation-delay:.2s;
+
+}
+
+.card-flip:nth-child(2){
+
+animation-delay:.4s;
+
+}
+
+.card-flip:nth-child(3){
+
+animation-delay:.6s;
+
+}
+
+.card-flip:nth-child(4){
+
+animation-delay:.8s;
+
+}
+
+.card-flip:nth-child(5){
+
+animation-delay:1s;
+
+}
+
+.card-flip:nth-child(6){
+
+animation-delay:1.2s;
+
+}
+
+
+
+
+@keyframes cartasEntrada{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(80px) rotateX(40deg);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+}
+
+
+
+
+
+.card-flip:hover{
+
+
+transform:translateY(-15px);
+
+}
+
+
+
+
+
+/* QUIZ */
+
+
+.quiz-box{
+
+
+animation:quizEntrada 1s ease;
+
+
+}
+
+
+
+@keyframes quizEntrada{
+
+
+from{
+
+opacity:0;
+
+transform:scale(.8);
+
+}
+
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+
+
+}
+
+
+
+
+
+.resposta{
+
+
+animation:botaoQuiz .6s ease backwards;
+
+
+}
+
+
+
+
+.resposta:hover{
+
+
+transform:scale(1.05);
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.3);
+
+
+}
+
+
+
+
+
+@keyframes botaoQuiz{
+
+
+from{
+
+opacity:0;
+
+transform:translateX(-40px);
+
+}
+
+
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+
+
+}
+
+
+
+
+
+/* ACESSIBILIDADE */
+
+
+.acessibilidade button{
+
+
+animation:flutuar 3s infinite ease-in-out;
+
+
+}
+
+
+
+@keyframes flutuar{
+
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+
+}
+
+
+
+
+
+
+/* CERTIFICADO */
+
+
+.certificado{
+
+
+animation:certificadoEntrada 1.5s ease;
+
+
+}
+
+
+
+@keyframes certificadoEntrada{
+
+
+from{
+
+opacity:0;
+
+transform:scale(.7) rotate(-3deg);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1) rotate(0);
+
+}
+
+
+
+}
+
+
+/* =========================
+   CARDS PREMIUM 3X3
+========================= */
+
+
+.cards-sobre{
+
+display:grid;
+
+grid-template-columns:repeat(3,320px);
+
+justify-content:center;
+
+gap:40px;
+
+margin:60px auto;
+
+}
+
+
+
+
+
+.card-flip{
+
+width:320px;
+
+height:380px;
+
+position:relative;
+
+perspective:1000px;
+
+}
+
+
+
+
+
+.card-flip .frente,
+.card-flip .tras{
+
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+border-radius:30px;
+
+overflow:hidden;
+
+backface-visibility:hidden;
+
+transition:.8s;
+
+}
+
+
+
+
+
+
+
+/* FRENTE COM FOTO INTEIRA */
+
+
+.card-flip .frente{
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+
+
+
+.card-flip .frente::before{
+
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.45);
+
+
+}
+
+
+
+
+
+
+
+/* TEXTO EM CIMA DA FOTO */
+
+
+.card-flip .frente h2{
+
+
+position:relative;
+
+z-index:2;
+
+color:white;
+
+font-size:32px;
+
+font-weight:900;
+
+text-shadow:0 5px 20px black;
+
+padding:20px;
+
+
+}
+
+
+
+
+
+
+
+/* IMAGENS */
+
+
+.card-flip:nth-child(1) .frente{
+
+background-image:url("img/sustentabilidade.jpg");
+
+}
+
+
+.card-flip:nth-child(2) .frente{
+
+background-image:url("img/energia.jpg");
+}
+
+
+.card-flip:nth-child(3) .frente{
+
+background-image:url("img/floresta.jpg");
+
+}
+
+
+.card-flip:nth-child(4) .frente{
+
+background-image:url("img/reciclagem.jpg");
+
+}
+
+
+.card-flip:nth-child(5) .frente{
+
+background-image:url("img/futuro.jpg");
+
+}
+
+
+.card-flip:nth-child(6) .frente{
+
+background-image:url("img/agua.jpg");
+
+}
+
+
+
+
+
+
+
+/* PARTE DE TRÁS */
+
+
+.card-flip .tras{
+
+
+background:#087f3d;
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:40px;
+
+transform:rotateY(180deg);
+
+}
+
+
+
+
+
+.card-flip .tras p{
+
+
+font-size:23px;
+
+line-height:1.5;
+
+
+}
+
+
+
+
+
+
+
+/* VIRAR */
+
+
+.card-flip:hover .frente{
+
+
+transform:rotateY(180deg);
+
+
+}
+
+
+
+.card-flip:hover .tras{
+
+
+transform:rotateY(360deg);
+
+
+}
+
+
+
+
+
+
+/* RESPONSIVO */
+
+
+@media(max-width:1100px){
+
+
+.cards-sobre{
+
+grid-template-columns:repeat(2,320px);
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.cards-sobre{
+
+grid-template-columns:320px;
+
+}
+
+
+}
+
+
+
+/* FORÇA CARD NOVO */
+
+.cards-sobre{
+
+display:grid !important;
+
+grid-template-columns:repeat(3,320px) !important;
+
+justify-content:center !important;
+
+gap:40px !important;
+
+}
+
+
+
+.card-flip{
+
+width:320px !important;
+
+height:380px !important;
+
+position:relative !important;
+
+perspective:1000px !important;
+
+}
+
+
+
+
+
+.card-flip .frente{
+
+
+position:absolute !important;
+
+inset:0 !important;
+
+width:100% !important;
+
+height:100% !important;
+
+border-radius:30px !important;
+
+overflow:hidden !important;
+
+display:flex !important;
+
+align-items:center !important;
+
+justify-content:center !important;
+
+text-align:center !important;
+
+background-size:cover !important;
+
+background-position:center !important;
+
+}
+
+
+
+
+
+.card-flip .frente h2{
+
+
+position:relative !important;
+
+z-index:5 !important;
+
+color:white !important;
+
+font-size:32px !important;
+
+font-weight:900 !important;
+
+text-shadow:0 5px 20px black !important;
+
+
+}
+
+
+
+
+
+.card-flip .frente::after{
+
+
+content:"";
+
+position:absolute !important;
+
+inset:0 !important;
+
+background:rgba(0,0,0,.45) !important;
+
+
+}
+
+
+
+
+
+
+.card-flip:nth-child(1) .frente{
+
+background-image:url("//sustentabilidade.jpg") !important;
+
+}
+
+
+.card-flip:nth-child(2) .frente{
+
+background-image:url("img/energia.jpg") !important;
+
+}
+
+
+.card-flip:nth-child(3) .frente{
+
+background-image:url("//floresta.jpg") !important;
+
+}
+
+
+.card-flip:nth-child(4) .frente{
+
+background-image:url("img/reciclagem.jpg") !important;
+
+}
+
+
+.card-flip:nth-child(5) .frente{
+
+background-image:url("img/futuro.jpg") !important;
+
+}
+
+
+.card-flip:nth-child(6) .frente{
+
+background-image:url("img/agua.jpg") !important;
+
+}
+
+
+
+
+
+
+
+.card-flip .tras{
+
+
+position:absolute !important;
+
+inset:0 !important;
+
+border-radius:30px !important;
+
+background:#087f3d !important;
+
+color:white !important;
+
+display:flex !important;
+
+align-items:center !important;
+
+justify-content:center !important;
+
+text-align:center !important;
+
+padding:40px !important;
+
+transform:rotateY(180deg) !important;
+
+backface-visibility:hidden !important;
+
+
+}
+
+
+
+.card-flip .frente{
+
+backface-visibility:hidden !important;
+
+transition:.8s !important;
+
+}
+
+
+
+.card-flip .tras{
+
+transition:.8s !important;
+
+}
+
+
+
+.card-flip:hover .frente{
+
+transform:rotateY(180deg) !important;
+
+}
+
+
+
+.card-flip:hover .tras{
+
+transform:rotateY(360deg) !important;
+
+}
+
+
+
+
+
+@media(max-width:1100px){
+
+.cards-sobre{
+
+grid-template-columns:repeat(2,320px) !important;
+
+}
+
+}
+
+
+
+@media(max-width:700px){
+
+.cards-sobre{
+
+grid-template-columns:320px !important;
+
+}
+
+}
+
+.card-flip .frente{
+
+position:relative;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+
+.card-flip .frente::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+}
+
+
+
+.card-flip .frente h2{
+
+position:relative;
+
+z-index:10;
+
+color:white;
+
+font-size:32px;
+
+font-weight:900;
+
+text-shadow:0 0 20px black;
+
+padding:20px;
+
+}
+
+/* =========================
+   CARDS COM FOTO + TEXTO
+========================= */
+
+.cards-sobre{
+
+display:grid !important;
+
+grid-template-columns:repeat(3,320px) !important;
+
+justify-content:center !important;
+
+gap:40px !important;
+
+margin:60px auto !important;
+
+}
+
+
+
+.card-flip{
+
+width:320px !important;
+
+height:380px !important;
+
+position:relative !important;
+
+perspective:1200px !important;
+
+}
+
+
+
+.card-flip .frente,
+.card-flip .tras{
+
+position:absolute !important;
+
+top:0 !important;
+
+left:0 !important;
+
+width:100% !important;
+
+height:100% !important;
+
+border-radius:30px !important;
+
+overflow:hidden !important;
+
+backface-visibility:hidden !important;
+
+transition:.8s !important;
+
+}
+
+
+
+/* FRENTE */
+
+.card-flip .frente{
+
+display:flex !important;
+
+justify-content:center !important;
+
+align-items:center !important;
+
+position:relative !important;
+
+}
+
+
+
+/* FOTO */
+
+.card-flip .frente img{
+
+position:absolute !important;
+
+top:0 !important;
+
+left:0 !important;
+
+width:100% !important;
+
+height:100% !important;
+
+object-fit:cover !important;
+
+z-index:1 !important;
+
+}
+
+
+
+/* CAMADA ESCURA */
+
+.card-flip .frente::after{
+
+content:"" !important;
+
+position:absolute !important;
+
+top:0 !important;
+
+left:0 !important;
+
+width:100% !important;
+
+height:100% !important;
+
+background:rgba(0,0,0,.45) !important;
+
+z-index:2 !important;
+
+}
+
+
+
+/* TEXTO */
+
+.card-flip .frente h2{
+
+position:relative !important;
+
+z-index:3 !important;
+
+color:white !important;
+
+font-size:32px !important;
+
+font-weight:900 !important;
+
+text-align:center !important;
+
+padding:20px !important;
+
+text-shadow:0 5px 20px black !important;
+
+}
+
+
+
+/* VERSO */
+
+.card-flip .tras{
+
+background:#087f3d !important;
+
+color:white !important;
+
+display:flex !important;
+
+justify-content:center !important;
+
+align-items:center !important;
+
+text-align:center !important;
+
+padding:35px !important;
+
+transform:rotateY(180deg) !important;
+
+}
+
+
+
+.card-flip .tras p{
+
+font-size:22px !important;
+
+line-height:1.5 !important;
+
+}
+
+
+
+/* VIRAR */
+
+.card-flip:hover .frente{
+
+transform:rotateY(180deg) !important;
+
+}
+
+
+
+.card-flip:hover .tras{
+
+transform:rotateY(360deg) !important;
+
+}
+
+
+
+/* RESPONSIVO */
+
+@media(max-width:1100px){
+
+.cards-sobre{
+
+grid-template-columns:repeat(2,320px) !important;
+
+}
+
+}
+
+
+
+@media(max-width:700px){
+
+.cards-sobre{
+
+grid-template-columns:320px !important;
+
+}
+
+}
+
+.card-flip .frente img{
+
+transition:transform .8s ease;
+
+}
+
+.card-flip:hover .frente img{
+
+transform:scale(1.15);
+
+}
+
+.card-flip .frente::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.35),
+transparent
+);
+
+z-index:3;
+
+transition:1s;
+
+}
+
+.card-flip:hover .frente::before{
+
+left:150%;
+
+}
+
+.barra{
+
+width:100%;
+
+max-width:700px;
+
+height:14px;
+
+background:rgba(255,255,255,.25);
+
+border-radius:20px;
+
+margin:20px auto;
+
+overflow:hidden;
+
+}
+
+#progresso{
+
+width:0%;
+
+height:100%;
+
+background:#7CFC00;
+
+transition:.5s;
+
+}
+/* =========================
+   ANIMAÇÃO CERTIFICADO
+========================= */
+.confete{
+
+position:fixed;
+
+top:-50px;
+
+font-size:28px;
+
+z-index:9999;
+
+animation:cair linear forwards;
+
+pointer-events:none;
+
+}
+
+@keyframes cair{
+
+    to{
+
+        transform:translateY(110vh) rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
