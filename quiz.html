@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz EcoVida</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="acessibilidade">
+
+<button onclick="lerPagina()">🔊</button>
+
+<button onclick="aumentarFonte()">A+</button>
+
+<button onclick="diminuirFonte()">A-</button>
+
+<button onclick="contraste()">🌙</button>
+
+</div>
+
+
+
+
+
+<section class="quiz-area">
+
+
+<div class="quiz-box">
+
+
+<h1>
+🎯 Quiz EcoVida
+</h1>
+
+
+
+<div class="barra">
+
+<div id="progresso"></div>
+
+</div>
+
+
+
+<h3 id="contador">
+Pergunta 1
+</h3>
+
+
+
+<h2 id="pergunta">
+Carregando...
+</h2>
+
+
+
+
+<div id="respostas">
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script src="script.js"></script>
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+
+</html>
